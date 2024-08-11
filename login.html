@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <p></p>
+  <div class="container">
+    <img src="imagenes/LOGOWEBJOB.png" alt="Logo">
+    <h1 class="login-text">¿Estás listo para dar el siguiente paso?</h1>
+    <p class="login-text-dos">Cree una cuenta o inicie sesión.</p>
+    <p class="login-text-tres">Al crear una cuenta o iniciar sesión, usted reconoce y acepta los Términos de Webjob.
+      Además, reconoce nuestras Políticas de Cookies y Privacidad. Recibirá mensajes de marketing de Webjob y podrá
+      darlos de baja en cualquier momento mediante el link para cancelar la suscripción que incluimos en nuestros
+      mensajes, o según se detalla en nuestras condiciones.</p>
+      
+    <div class="email-field">
+      <form id="login-form" action="validar.php" method="post">
+        <input type="email" name="email" placeholder="Dirección de email" required>
+        <span id="email-error" class="error"></span>
+        
+    </form>
+    </div>
+   
+    <a href="#" class="custom-button">
+      Continuar
+      <img src="imagenes/arrow-right-circle.png" alt="" class="button-image">
+    </a>
+  
+    
+    <p class="login-text-cuatro">O ingresar con:</p>
+    <a href="crearcuenta.html" class="apple-btn">
+      <img src="imagenes/Boton apple.png" alt="">
+
+    </a>
+    <a href="crearcuenta.html" class="google-btn">
+      <img src="imagenes/Boton google.png" alt="">
+
+    </a>
+
+  </div>
+
+</body>
+<script src="login.js"></script>
+</html>

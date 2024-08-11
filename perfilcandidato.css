@@ -1,0 +1,346 @@
+header {
+
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.navcandidato {
+
+    /* Cambia el color al pasar el mouse */
+    color: #F5F5F5;
+}
+
+#myContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    border-color: #9391FF;
+    background-color: #F5F5F5;
+    border-radius: 2.5%;
+
+
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    height: 490px;
+    border-color: #9391FF;
+
+}
+
+.tituloaside {
+
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.left-column {
+
+    background-image: url(imagenes/Rectangle\ gestionando\ mi\ perfil.png);
+    background-size: contain;
+    /* Ajusta la imagen dentro del contenedor */
+    background-position: top;
+    /* Posiciona la imagen en la parte superior */
+    background-repeat: no-repeat;
+    /* Evita repetir la imagen */
+    border-radius: 5%;
+    /* Ajusta la altura según sea necesario */
+    text-align: center;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: ridge;
+    border-color: #9391FF;
+
+}
+
+.right-column {
+
+    flex: 2.7;
+    text-align: center;
+    border: ridge;
+    border-color: #9391FF;
+    border-radius: 3%;
+}
+
+.contenedorcandidato {
+    display: flex;
+
+}
+
+
+
+.navcandidato {
+
+    text-align: justify;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+
+
+.navcandidato ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    /* Asegurar alineación al extremo derecho */
+    /* align-items: center;
+    /* Centrar verticalmente los elementos */
+    gap: 25px;
+    /* Espacio entre elementos */
+    /* padding: 0 375px;
+    /* Espacio interno de la lista */
+    color: #8361EA;
+}
+
+.navcandidato ul li {
+    /* Estilos adicionales para los elementos de la lista */
+
+    border-radius: 5px;
+    /* Bordes redondeados */
+}
+
+.navcandidato li {
+    position: relative;
+}
+
+.navcandidato li i {
+    position: absolute;
+    top: -5px;
+    /* Ajusta esta medida según el tamaño del icono */
+}
+
+.user-profile {
+    position: relative;
+    display: inline-block;
+}
+
+.user-profile img {
+    width: 15px;
+    height: 15px;
+    border-radius: 25%;
+    
+}
+
+.user-profile label {
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    transform: translateX(67%);
+}
+
+.icon-nav {
+    display: flex;
+    justify-content: flex-end;
+    /* Alinea los elementos al final del contenedor */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    gap: 10px;
+    /* Espacio entre elementos */
+}
+
+.iconnav ul {
+    list-style: none;
+    justify-content: right;
+    gap: 10px;
+
+    /* Centra los elementos horizontalmente */
+}
+
+.iconnav li {
+    list-style: none;
+    position: relative;
+    /* Necesario para el posicionamiento absoluto de los iconos */
+    text-align: right;
+    justify-content: space-evenly;
+    /* Necesario para el centrado de los iconos */
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.iconnav li:hover {
+
+    /* Cambia el color de fondo al pasar el mouse */
+    color: #A442DB;
+}
+
+.selected {
+    background-color: #023047;
+    /* Color de fondo para el elemento seleccionado */
+}
+
+.user-profile {
+    position: relative;
+
+}
+
+.user-profile img {
+    position: absolute;
+    top: -30px;
+    /* Ajusta la posición vertical de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.contenedorvisor {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Ajusta las proporciones según sea necesario */
+    height: 100vh;
+    /* Ocupa toda la altura de la viewport */
+    background-color: #F0F0F0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: #8361EA;
+
+
+}
+
+.navcandidato img {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 75px;
+    /* Ajusta el tamaño del logo */
+    height: auto;
+    /* Ajusta el margen superior */
+    margin-left: 20px;
+    /* Ajusta el margen izquierdo */
+}
+
+
+.user-profile img {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 44px;
+    /* Ajusta el tamaño del logo */
+    height: auto;
+    /* Ajusta el margen superior */
+    margin-left: 20px;
+    /* Ajusta el margen izquierdo */
+}
+
+.navcandidato {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center;*/
+}
+
+.user-profile img {
+    margin-top: -62px;
+}
+
+.icon-list {
+    list-style: none;
+    /* Elimina los marcadores de lista por defecto */
+    padding: 35px;
+
+}
+
+.icon-list li {
+    display: flex;
+    align-items: right;
+    padding: 10px;
+    cursor: pointer;
+    gap: 12px;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: #8361EA;
+    font-weight: 500;
+}
+
+.icon-list li:hover {
+    background-color: #F5F5F5;
+    /* Cambia el color de fondo al pasar el mouse */
+    color: #A442DB;
+}
+
+.selected {
+    background-color: #023047;
+    /* Color de fondo para el elemento seleccionado */
+}
+
+hr {
+    border: none;
+    /* Elimina el borde por defecto */
+    border-top: 1px solid #8361EA;
+    /* Agrega un borde superior de 2px de color gris claro */
+    margin: -35px 110px;
+    /* Agrega márgenes arriba y abajo */
+    margin-bottom: 35px;
+}
+
+.linea-vertical {
+    width: 50px;
+    /* Ancho de la línea */
+    height: 90vh;
+    /* Altura completa de la viewport */
+    background-color: #Fff;
+    /* Color de la línea */
+    right: 0;
+    /* Posiciona la línea al lado derecho */
+}
+
+.linea-vertical2 {
+    width: 25px;
+    /* Ancho de la línea */
+    height: 90vh;
+    /* Altura completa de la viewport */
+    background-color: #Fff;
+    /* Color de la línea */
+    right: 0;
+    /* Posiciona la línea al lado derecho */
+}
+
+.linea-vertical3 {
+    width: 25px;
+    /* Ancho de la línea */
+    height: 90vh;
+    /* Altura completa de la viewport */
+    background-color: #Fff;
+    /* Color de la línea */
+    right: 0;
+    /* Posiciona la línea al lado derecho */
+}
+
+.mensaje1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #8361EA;
+    font-weight: 650;
+    font-size: 26.76px;
+    margin-bottom: -35px;
+
+}
+
+.nombre {
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #8361EA;
+    font-weight: 650;
+    font-size: 26.76px;
+    margin-bottom: -30px;
+
+
+}
+.right-column img {
+    align-items: center;
+    margin-top: 10%;
+
+}
+
+.mensaje2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000000;
+    font-weight: 500;
+    font-size: 26.76px;
+    margin-bottom: -35px;
+    
+}
