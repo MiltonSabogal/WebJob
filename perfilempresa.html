@@ -1,5 +1,12 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+<?php
+// Include the session script
+include 'registroempresa.php';
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -32,10 +39,10 @@
                 <li></li>
                 <li></li>
                          
-                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
                 <li><i class="fas fa-bell"></i> Notificaciones</li>
                 <li><i class="fas fa-envelope"></i> Mensajes</li>
                 <li><i class="fas fa-comment"></i> Chat</li>
+                <li><a href="ingreso.html"><i class="fas fa-door-open"></i>Salir</a></li>
                 <li>
                   
                     <div class="user-profile">
@@ -75,7 +82,9 @@
         <div class="right-column">
             <img src="imagenes/mundoplanet.png" alt="Imagen de bienvenida">
         <h1 class="mensaje1">¡Te damos la bienvenida!</h1>
-        <p class="nombre">MuNdOPlAnEt</p>
+        <p class="nombre">
+         <?php echo $_SESSION['empresa_nombre'] ?? 'Nombre de empresa no encontrado'; ?>
+        </p>
         <p class="mensaje2">Optimiza tu búsqueda de talento para una contratación eficaz</p>
 
         </div>

@@ -3,7 +3,9 @@
 
 <head>
   <title>login</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8">
 </head>
 
 <body>
@@ -16,21 +18,21 @@
       Además, reconoce nuestras Políticas de Cookies y Privacidad. Recibirá mensajes de marketing de Webjob y podrá
       darlos de baja en cualquier momento mediante el link para cancelar la suscripción que incluimos en nuestros
       mensajes, o según se detalla en nuestras condiciones.</p>
-      
+
+
     <div class="email-field">
       <form id="login-form" action="validar.php" method="post">
-        <input type="email" name="email" placeholder="Dirección de email" required>
+        <input type="text" name="usuario" placeholder="Nombre de usuario" required>
+        <input type="email" name="correo" placeholder="Dirección de email" required>
         <span id="email-error" class="error"></span>
-        
-    </form>
+        <input type="password" name="contrasena" placeholder="Contrasena" required>
+        <button class="button" type="submit">Continuar
+          <img src="imagenes/arrow-right-circle.png" alt="">
+        </button>
+      </form>
+
     </div>
-   
-    <a href="#" class="custom-button">
-      Continuar
-      <img src="imagenes/arrow-right-circle.png" alt="" class="button-image">
-    </a>
-  
-    
+
     <p class="login-text-cuatro">O ingresar con:</p>
     <a href="crearcuenta.html" class="apple-btn">
       <img src="imagenes/Boton apple.png" alt="">
@@ -45,4 +47,5 @@
 
 </body>
 <script src="login.js"></script>
+
 </html>

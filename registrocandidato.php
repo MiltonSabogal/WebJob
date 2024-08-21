@@ -4,6 +4,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "usuarios";
+
 session_start();
 
 try {
@@ -14,8 +15,8 @@ try {
   // Procesar el formulario solo si se ha enviado
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener y validar datos del formulario
-    $usuario = htmlspecialchars($_POST['usuario'], ENT_QUOTES);
-    if (strlen($usuario) > 20) {
+    $nombre = htmlspecialchars($_POST['nombre'], ENT_QUOTES);
+    if (strlen($nombre) > 20) {
       echo "El nombre de usuario es demasiado largo.";
       exit;
     }
@@ -26,22 +27,35 @@ try {
       exit;
     }
     $contrasena = password_hash($_POST['contrasena'], PASSWORD_DEFAULT);
+    $conn->beginTransaction();
 
-    // Preparar y ejecutar la sentencia SQL
-    $sql = "INSERT INTO candidato (nombre, correo, contrasena) VALUES (:nombre, :correo, :contrasena)";
+    
+
+    $sql = "INSERT INTO perfiles (correo, contrasena, tipo) VALUES (:correo, :contrasena, :tipo)";
     $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':nombre', $usuario);
     $stmt->bindParam(':correo', $correo);
     $stmt->bindParam(':contrasena', $contrasena);
+    $tipo = "candidato";
+    $stmt->bindParam(':tipo', $tipo);
     $stmt->execute();
-
+    $perfil_id = $conn->lastInsertId();
+     // Insertar en candidatos con el perfil_id obtenido
+     $sql = "INSERT INTO candidatos (nombre_candidato, perfil_id) VALUES (:nombre_candidato, :perfil_id)";
+     $stmt = $conn->prepare($sql);
+     $stmt->bindParam(':nombre_candidato', $nombre);
+     $stmt->bindParam(':perfil_id', $perfil_id);
+     $stmt->execute();
+     $conn->commit();
+ 
     // Redirigir al usuario
-    header("Location: crearcuenta.html");
+    header("Location: confirmacioncandidato.html");
   } else {
     echo "Error: Datos del formulario no válidos.";
   }
 } catch (PDOException $e) {
-  echo "Error de conexión a la base de datos: " . $e->getMessage();
+  // Deshacer la transacción en caso de error
+  $conn->rollBack();
+  echo "Error: " . $e->getMessage();
   // Registrar el error para depuración
-  error_log("Error de conexión a la base de datos: " . $e->getMessage());
+  error_log("Error: " . $e->getMessage());
 }

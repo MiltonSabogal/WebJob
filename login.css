@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+#container {
+
+    color: #fff;
+    /* Color de fuente blanco para contraste */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('imagenes/Crear\ cuenta.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    /* Ajusta el ancho según sea necesario */
+    margin: 0 auto;
+    width: 80%;
+    /* Ajusta el ancho según sea necesario */
+    max-width: 400px;
+    /* Establece un ancho máximo para evitar que se extienda demasiado */
+    padding: 30px;
+}
+
+
+.login-text {
+    font-size: 26px;
+    color: #8361EA;
+    padding: 20px;
+    font-weight: bold;
+    /* Agrega negrita */
+    font-family: 'Roboto Slab', sans-serif;
+    /* Utiliza la fuente Roboto Slab */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+}
+
+.login-text-dos {
+    font-size: 21.76px;
+    color: #023047;
+    font-weight: bold;
+    /* Agrega negrita */
+    font-family: 'Roboto Slab', sans-serif;
+    /* Utiliza la fuente Roboto Slab */
+    margin-bottom: 5px;
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+}
+
+.login-text-tres {
+    font-size: 8.76px;
+    color: #023047;
+    margin-bottom: 20px;
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+
+}
+
+.login-text-cuatro {
+    font-size: 12px;
+    color: #023047;
+    opacity: 50%;
+    margin-bottom: 3px;
+}
+
+.apple-btn,
+.google-btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    /* Haz que los botones ocupen todo el ancho del contenedor */
+    margin-bottom: 10px;
+}
+
+.apple-btn img,
+.google-btn img {
+    margin-right: 10px;
+}
+
+.button {
+    background-color: #B4A1FF;
+    border: 1px solid #9391FF;
+    color: #fff;
+    padding: 11px 119px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .button:hover {
+    background-color: #7777cc;
+  }
+.email-field {
+    position: relative;
+    /* Para posicionar el icono */
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.email-field input {
+    width: 333px;
+    height: 40px;
+    border: 1px solid #B4A1FF;
+    border-radius: 50px;
+    padding: 22px 22px;
+    font-size: 16px;
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Ajusta el espacio entre los inputs */
+
+}
+
+.email-field input:focus {
+    outline: none;
+    border-color: #9391FF;
+  
+}
+
+/* Si quieres agregar un icono de correo electrónico */
+.email-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 18px;
+    color: #999;
+}
+
