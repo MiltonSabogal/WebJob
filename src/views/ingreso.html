@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inicio de Sesión en WebJob</title>
+  <link rel="stylesheet" href="/public/css/ingreso.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div class="container">
+    <img src="/public/imagenes/LOGOWEBJOB.png" alt="Logo de WebJob">
+    <h1>¡Bienvenido a WebJob!</h1>
+    <form action="/src/controllers/ingreso.php" method="post">
+      <label for="correo">Correo electrónico:</label>
+      <input type="correo" id="correo" name="correo" required>
+
+      <label for="contrasena">Contraseña:</label> 
+
+      <input type="password" id="contrasena" name="contrasena" required>
+      <span class="toggle-password">
+        <i class="fa fa-eye"></i>
+      </span>
+
+      <button type="submit">Ingresar</button>
+    </form>
+    <p>¿No tienes una cuenta? <a href="/src/views/crearcuenta.html">Regístrate</a></p>
+  </div>
+  <script src="https://kit.fontawesome.com/your_font_awesome_kit.js" crossorigin="anonymous"></script>
+  <script src="/public/js/ingreso.js"></script>
+</body> 
+
+
+</html>
